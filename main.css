@@ -1,33 +1,54 @@
 *{
     padding:0;margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
-body {
+
+:root {
+
+    --title-font: 3rem;
+    --text-font: 1.2rem;
+    --subtitle-font: 1.5rem;
+    --figcapion-font: 0.8rem
+
+}
+
+    body {
     background: rgb(189, 189, 189);
 }
 .main-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 3rem 10rem;
-    background: rgb(255, 255, 255);
-    border-radius: .4rem;
+    justify-content: center;
+    align-items: center;
+
 }
 /*textos estilo*/
 h2 {text-align: center; font-size:3rem; margin-top: 2rem;}
-h3{ font-size: 1.5rem; text-align: center;}
-p {font-size:1rem; margin:1rem 0 1rem 4rem;}
+h3{ font-size: var(--subtitle-font); text-align: center;}
+p {font-size:var(--text-font); margin:1rem 0 1rem 4rem;}
 /*textos estilo*/
-    img {
-    width: 1220px;
-    max-height: 350px;
+    
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+img {
+    width: 20rem;
+    max-height: 15rem;
     border-radius: 1rem;
     object-fit: fill;
-    margin-left: 11rem;
+  
 }
 
-figcaption {margin-left: 77rem; font-size:0.9rem}
+figcaption {margin-top: .3rem; margin-left: 11rem; font-size:var(--figcapion-font) ;}
 
-ul {margin-left: 5rem}
-ul li {margin-top: 2rem}
+ul {margin-left: 1rem;}
+ul li {margin-top: 2rem;}
+
+
 
 .divider {
     width: 90%;
@@ -39,3 +60,51 @@ ul li {margin-top: 2rem}
     font-size: 0.8rem;
    text-align: center;
 }
+
+.extra-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ingredients-list ul li {
+    width: 20rem;
+    font-size: var(--text-font);
+}
+.prepare-list ul li{
+    width: 25rem;
+    font-size: var(--text-font)
+}
+
+@media (max-width: 400px) {
+
+    :root {
+
+        --title-font: 2rem;
+        --text-font: 1rem;
+        --subtitle-font: 1.2rem;
+        --figcapion-font: 0.5rem
+    
+    }
+
+    img {
+        width: 10rem;
+        max-height: 7.5rem;
+        border-radius: 1rem;
+        object-fit: fill;
+    }
+
+    .prepare-list ul li{
+        width: 15rem;
+        font-size: var(--text-font)
+    }
+
+    .ingredients-list ul li {
+        width: 15rem;
+        font-size: var(--text-font);
+    }
+    
+    
+}
+
+
