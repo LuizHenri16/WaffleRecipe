@@ -7,13 +7,60 @@
     --title-font: 3rem;
     --text-font: 1.2rem;
     --subtitle-font: 1.5rem;
-    --figcapion-font: 0.8rem
+    --figcapion-font: 0.8rem;
 
+
+    --background--color: #f3f3f3;
+    --font-color: #181818;
+
+    --background--color-dark:#181818 ;
+    --font-color-dark: #f3f3f3;
 }
 
-    body {
-    background: rgb(189, 189, 189);
+body.dark, body.dark h2, body.dark h3, body.dark p, body.dark ul li {
+    background:var(--background--color-dark);
+    color: var(--font-color-dark);
 }
+
+
+/*Button Dark Mode*/
+.button {
+    display: flex;
+    width: 8rem;
+    height: 2rem;
+    background: rgb(62, 63, 73);
+    border-radius: .3rem;
+    margin: 1rem; color: #f3f3f3;
+    justify-content: center;
+
+    box-shadow: 2px 3px 0px -2px rgba(0,0,0,0.4);
+-webkit-box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.4);
+-moz-box-shadow: 2px 3px 0px 1px rgba(0,0,0,0.4);
+}
+
+.dark-toggle {
+   
+    padding: .5rem;
+    text-align: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+body.dark .button{
+   color: #181818;
+   background: #f3f3f3;
+
+   box-shadow: 2px 3px 8px -2px rgba(255, 255, 255, 0.377);
+-webkit-box-shadow: 2px 3px 8px -2px rgba(255, 253, 253, 0.4);
+-moz-box-shadow: 2px 3px 10px -1px rgba(255, 255, 255, 0.4);
+}
+
+
+/*Button Dark Mode*/
+
 .main-content {
     width: 100%;
     display: flex;
@@ -23,9 +70,9 @@
 
 }
 /*textos estilo*/
-h2 {text-align: center; font-size:3rem; margin-top: 2rem;}
-h3{ font-size: var(--subtitle-font); text-align: center;}
-p {font-size:var(--text-font); margin:1rem 0 1rem 4rem;}
+h2 {text-align: center; font-size:3rem; margin-top: 2rem; color: var(--font-color);}
+h3{ font-size: var(--subtitle-font); text-align: center; color: var(--font-color);}
+p {font-size:var(--text-font); margin:1rem 0 1rem 4rem; color: var(--font-color);}
 /*textos estilo*/
     
 .image {
@@ -43,7 +90,7 @@ img {
   
 }
 
-figcaption {margin-top: .3rem; margin-left: 11rem; font-size:var(--figcapion-font) ;}
+figcaption {margin-top: .3rem; margin-left: 11rem; font-size:var(--figcapion-font); color: var(--font-color);}
 
 ul {margin-left: 1rem;}
 ul li {margin-top: 2rem;}
@@ -53,12 +100,13 @@ ul li {margin-top: 2rem;}
 .divider {
     width: 90%;
     height: 1px;
-    background: rgb(170, 170, 170);
+    background: var(--divider-color);
     margin: 2rem auto 2rem auto;}
 
 .credits {
     font-size: 0.8rem;
    text-align: center;
+   color: var(--font-color);
 }
 
 .extra-infos {
@@ -70,10 +118,12 @@ ul li {margin-top: 2rem;}
 .ingredients-list ul li {
     width: 20rem;
     font-size: var(--text-font);
+    color: var(--font-color);
 }
 .prepare-list ul li{
     width: 25rem;
-    font-size: var(--text-font)
+    font-size: var(--text-font);
+    color: var(--font-color);
 }
 
 @media (max-width: 400px) {
